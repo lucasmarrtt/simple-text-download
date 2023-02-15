@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Manrope', sans-serif;
+}
+
+section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: yellow;
+}
+
+/*
+section .circle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #ffff3f;
+    clip-path: circle(70% at right -20%);
+}
+*/
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    position: relative;
+    max-width: 350px;
+}
+
+header .navigation {
+    position: relative;
+    display: flex;
+}
+
+header .navigation li {
+    list-style: none;
+}
+
+header .navigation li a {
+    display: inline-block;
+    text-decoration: none;
+    margin-left: 40px;
+}
+
+.btn {
+    text-decoration: none;
+    padding: 14px 40px;
+    color: #fff;
+    background-image: linear-gradient(45deg, #17BEBB, #FF7477);
+    font-size: 18px;
+    border-radius: 30px;
+    border-top-right-radius: 0;
+    font-weight: 900;
+}
+
+.btn:hover {
+    transition: 0.9s;
+    text-decoration: none;
+    padding: 14px 40px;
+    color: #fff;
+    background-image: linear-gradient(45deg, #FF7477, #17BEBB);
+    font-size: 18px;
+    border-radius: 30px;
+    border-top-right-radius: 30px;
+    font-weight: 900;
+}
+
+.content {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.content .textBox {
+    position: relative;
+    max-width: 600px;
+    margin-right: 20px;
+}
+
+.content .textBox h2 {
+    color: #0F0A0A;
+    font-size: 5em;
+    margin-bottom: 10px;
+    line-height: 1.4em;
+    font-weight: 700;
+}
+
+.content .textBox p {
+    color: #0F0A0A;
+    font-size: 22px;
+}
+
+.content .textBox a {
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.sci {
+    position: absolute;
+    bottom: 40px;
+    left: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sci li {
+    list-style: none;
+}
+
+.sci li a {
+    display: inline-block;
+    margin-left: 15px;
+    text-decoration: none;
+    color: #0F0A0A;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content .imgBox {
+    width: 700px;
+}
+
+.content .imgBox form {
+    display: inline-block;
+    width: 100%;
+}
+
+.content .imgBox form .textarea-block {
+    resize: none;
+}
+
+.content .imgBox form .textarea-block textarea {
+    padding: 10px;
+    background: transparent;
+    border: 1px solid #0F0A0A;
+    width: 100%;
+    height: 270px;
+    resize: none;
+    color: #0F0A0A;
+    font-size: 18px;
+    font-weight: 900;
+}
+
+.content .imgBox form .input-block {
+    width: 100%;
+}
+
+.content .imgBox form .input-block .file-name input {
+    margin-top: 20px;
+    height: 50px;
+    width: 100%;
+}
+
+.content .imgBox form .input-block .save-as select {
+    margin-top: 20px;
+    height: 50px;
+    width: 100%;
+}
+
+.inputBox {
+    position: relative;
+    width: 100%;
+}
+
+.inputBox input {
+    padding: 10px;
+    border: 1px solid #0F0A0A;
+    background: transparent;
+    border-radius: 30px;
+    outline: none;
+    color: #000;
+    font-size: 1em;
+    border-top-right-radius: 0;
+}
+
+.inputBox select {
+    padding: 10px;
+    border: 1px solid #0F0A0A;
+    background: transparent;
+    border-radius: 30px;
+    outline: none;
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 15px;
+    border-top-right-radius: 0;
+}
+
+.anim {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: moveup 0.5s linear forwards;
+}
+
+@keyframes moveup {
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.button-class {
+    margin-top: 20px;
+    border: none;
+    width: 100%;
+}
+
+@media (max-width: 888px) {
+    .content .textBox h2 {
+        transition: 0.9s;
+        font-size: 3em;
+    }
+
+    .content .textBox p {
+        transition: 0.9s;
+        font-size: 18px;
+        color: #0F0A0A;
+    }
+}
+
+@media (max-width: 1237px) {
+    header {
+        padding: 40px;
+    }
+
+    section {
+        padding: 150px 40px;
+    }
+
+    .sci {
+        left: 40px;
+    }
+
+    .content {
+        transition: 0.9s;
+        flex-direction: column;
+    }
+
+    .content .textBox,
+    .content .imgBox {
+        margin-top: 50px;
+        max-width: 100%;
+    }
+
+    header .navigation {
+        display: none;
+    }
+}
